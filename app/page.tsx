@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import PromoCard from "./components/PromoCard";
+/*import AIChat from "./components/AIChat";*/
 
 
 export default function Page() {
@@ -65,7 +66,9 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <Banner />
+      <div className="banner_place">
+        <Banner />
+      </div>
       {products.map((product, index) => (
         <PromoCard
           key={index} 
@@ -76,6 +79,8 @@ export default function Page() {
           frequency={product.frequency}
         />
       ))}
+
+      {/*<AIChat />*/}
     </div>
   );
 }
