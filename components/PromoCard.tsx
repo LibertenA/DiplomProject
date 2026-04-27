@@ -10,12 +10,12 @@ export default function PromoCard ({ title, price, /*rating, gpuInterface, frequ
     return(
         <div className="product-card">
             <div className="product-card_icon">
-                <img src="/product.png" className="product_icon"/>
+                <img src="/product1.png" className="product_icon"/>
             </div>
-            <div className="product-card_title">
-                <h3>{title}</h3>
-                {/*<p>Оценка: {rating} звезд(ы)</p>*/}
-            </div>
+
+            <h3 className="product-card_title">{title}</h3>
+            {/*<p>Оценка: {rating} звезд(ы)</p>*/}
+
             <div className="product-card_price">
                 <p>{price} ₽</p>                    
             </div>
@@ -25,7 +25,7 @@ export default function PromoCard ({ title, price, /*rating, gpuInterface, frequ
             </div>*/}
 
             <button className="product-card_button">
-                <img src="/busket.png" />
+                <img src="/cart.png" />
                 <p>В корзину</p>
             </button>
         </div>

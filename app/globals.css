@@ -183,7 +183,7 @@ body {
   }
 }
 
-.busket_count{
+.cart_count{
   position: absolute;
   top: -6px;
   left: 8px; 
@@ -402,7 +402,6 @@ body {
 .product_place {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
 }
 
 .product-card {
@@ -421,8 +420,11 @@ body {
 .product-card_icon{
   width: 100%;
   max-width: 308px;
-  height: 320px;
+  height: 100%;
+  max-height: 320px;
   object-fit: cover;
+  padding: 77px 34px;
+  background-color: #F3F4F6;
 }
 
 .product-card_title{

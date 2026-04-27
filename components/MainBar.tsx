@@ -6,7 +6,7 @@ import CartButton from "./CartButton";
 import ModalWindow from "./ModalWindow";
 
 export default function MainBar() {
-    const basket = 0;
+    const cart = 0;
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalMode, setModalMode] = useState<"login" | "register">("login");
     
@@ -42,7 +42,7 @@ export default function MainBar() {
           <Search />
 
           <div className="header_actions">
-            <CartButton count={basket}/>
+            <CartButton count={cart}/>
             
             <button className="enter_btn" onClick={openLoginModal}>
               <img src="/user.png" className="user_icon"/>
