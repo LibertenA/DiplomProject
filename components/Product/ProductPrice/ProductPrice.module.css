@@ -1,0 +1,64 @@
+.productCardAddToCart {
+  background-color: #F3F4F6;
+  width: 308px;
+  height: 220px;
+  padding: 24px;
+
+  & .productCardPriceBlock {
+    & .oldPrice {
+      color: #A6AAB2;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    & .currentPrice {
+      color: #161616;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+  }
+
+  & .addToCartBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 260px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background-color: #396DEF;
+    border-radius: 8px;
+    margin-top: 24px;
+
+    & .cartIcon {
+      width: 24px;
+      height: 24px;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .installmentInfo {
+    border-top: 1px solid #E1E7EF; 
+    padding-top: 16px;            
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #1B1A1D;
+
+    & a {
+      color: #396DEF;
+    }
+  }
+}

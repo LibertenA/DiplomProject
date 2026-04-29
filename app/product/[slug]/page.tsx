@@ -1,39 +1,52 @@
 type Props = {
-    params: {
+    params: Promise<{
         slug: string;
+    }>;
+};
+
+
+import {
+  ProductInfo,
+  ProductPresentation,
+  ProductPrice
+} from "@/components/Product";
+import ProductsList from "@/components/ProductsList";
+import { mockProducts } from "@/data/mockProducts";
+
+export default async function Page({params}: Props) {
+    const { slug } = await params;
+
+    const product = mockProducts.find((p) => p.id === Number(slug));
+
+    if (!product) {
+        return <div className="p-10">Товар с ID {slug} не найден</div>;
     }
-}
 
-
-import ProductPresentation from "@/components/ProductPresentation"
-import ProductInfo from "@/components/ProductInfo"
-import ProductPrice from "@/components/ProductPrice"
-import ProductsList from "@/components/ProductsList"
-
-export default function Page({params: {slug}}: Props) {
     return(
         <div>
             <span className="directory_catalog">Главная / Каталог / Компьютеры и Ноутбуки / {slug}</span>
 
             <div className="product-full_place">
                 <ProductPresentation />
-                <ProductInfo 
-                    code= {2090229}
-                    title= {"Apple MacBook Neo 13 (A18 Pro, 6C СPU/5С GPU, 2026), 8 ГБ, 256 ГБ SSD, синий индиго"}
-                    color= {"индиго"}
-                    memory= {256}
-                    cpu= {"Apple M4 10-core (4 + 6)"}
-                    ram= {16}
-                    system= {"macOS"}
-                    display= {13.6}
-                    resolution= {"2560x1664"}
-                    weight= {1.24}
-                    language= {"английская/русская"}
+                <ProductInfo
+                    code={product.id}
+                    title={`${product.title}, ${product.ram} ГБ, ${product.memory} ГБ SSD, ${product.color}`}
+                    color={product.color}
+                    memory={product.memory}
+                    cpu={product.cpu}
+                    ram={product.ram}
+                    system={product.system}
+                    display={product.display}
+                    resolution={product.resolution}
+                    weight={product.weight}
+                    language={product.language}
                 />
-                <ProductPrice 
-                    price={79990} 
-                    discount={5000} 
-                    installment={4166} />
+
+                <ProductPrice
+                    price={product.price}
+                    discount={product.discount}
+                    installment={product.installment}
+                />
             </div>
             
             <div className="product-discription_place">
@@ -55,5 +68,4 @@ export default function Page({params: {slug}}: Props) {
             </div>
         </div>
     )
-
 }

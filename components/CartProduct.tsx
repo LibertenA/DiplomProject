@@ -5,13 +5,14 @@ interface CartProductProps {
     color: string;
     memory: number;
     ram: number;
+    count: number;
 }
 
-export default function CartProduct ({code, title, price, color, memory, ram}: CartProductProps) {
+export default function CartProduct ({code, title, price, color, memory, ram, count}: CartProductProps) {
     return(
         <div className="cart-product_place">
             <div className="cart-product_icon">
-                <img src="/product1.png" />
+                <img src="/products/product1.png" />
             </div>
 
             <div className="cart-product_info">
@@ -27,7 +28,7 @@ export default function CartProduct ({code, title, price, color, memory, ram}: C
                 <button type="button" className="counter-btn">
                     <img src="/minus.png" />
                 </button>
-                <input type="number" className="counter-value"/>
+                <input type="number" className="counter-value" defaultValue={count} />
                 <button type="button" className="counter-btn">
                     <img src="/plus.png" />
                 </button>

@@ -1,3 +1,5 @@
+import styles from "./ProductInfo.module.css";
+
 interface ProductInfoProps {
     code: number;
     title: string;
@@ -14,50 +16,50 @@ interface ProductInfoProps {
 
 export default function ProductInfo({code, title, color, memory, cpu, ram, system, display, resolution, weight, language}: ProductInfoProps) {
     return(
-        <div className="product-info">
-            <div className="product-code">
+        <div className={styles.productInfo}>
+            <div className={styles.productCode}>
                 Код товара: <span> {code} </span>
             </div>
 
-            <h2 className="product-title">{title}</h2>
+            <h2 className={styles.productTitle}>{title}</h2>
 
-            <div className="product-color">
+            <div className={styles.productColor}>
                 Цвет: <span> {color} </span>
 
-                <ul className="color_change">
+                <ul className={styles.colorChange}>
                     <li>
-                        <div className="color"></div>
+                        <div className={styles.color}></div>
                     </li>
                     <li>
-                        <div className="color"></div>
+                        <div className={styles.color}></div>
                     </li>
                     <li>
-                        <div className="color"></div>
+                        <div className={styles.color}></div>
                     </li>
                     <li>
-                        <div className="color"></div>
+                        <div className={styles.color}></div>
                     </li>
                 </ul>
             </div>
 
-            <div className="product-memory">
+            <div className={styles.productMemory}>
                 Объем SSD: <span> {memory} </span>
 
-                <div className="memory_choose">
-                    <button className="memory_btn">
+                <div className={styles.memoryChoose}>
+                    <button className={styles.memoryBtn}>
                         {memory} Гб
                     </button>
 
-                    <button className="memory_btn">
+                    <button className={styles.memoryBtn}>
                         {memory} Гб
                     </button>
                 </div>
             </div>
 
-            <div className="product-info__features">
-                <h3 className="title_features">Характеристики</h3>
+            <div className={styles.productInfoFeatures}>
+                <h3 className={styles.titleFeatures}>Характеристики</h3>
 
-                <table className="features-table">
+                <table className={styles.featuresTable}>
                     <tbody>
                         <tr>
                             <th>Процессор</th>
@@ -86,7 +88,7 @@ export default function ProductInfo({code, title, color, memory, cpu, ram, syste
                     </tbody>
                 </table>
 
-                <a href="" className="more-link">Все характеристики</a>
+                <a href="" className={styles.moreLink}>Все характеристики</a>
             </div>
             
         </div>

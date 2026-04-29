@@ -1,0 +1,154 @@
+.productInfo{
+  max-width: 454px;
+  max-height: 680px;
+
+  & .productCode {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #A6AAB2;
+    margin-bottom: 8px;
+  }
+
+  & .productTitle {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+
+  & .productColor {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #A6AAB2;
+
+    & span {
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    & .colorChange {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: 184px;
+      height: 72px;
+      gap: 8px;
+      margin-top: 12px;
+
+      & li {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #E1E7EF;
+        cursor: pointer;
+        display: flex;       
+        align-items: center;
+        justify-content: center;
+
+        & .color {
+          width: 100%;
+          height: 100%;
+          background-color: #5976B3;
+          border-radius: 4px;
+        }
+      }
+          
+      & li:first-child {
+        border: 2px solid #396DEF;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .productMemory {
+    color: #A6AAB2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 24px;
+
+    & span {
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    & .memoryChoose{
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      width: 162px;
+      height: 40px;
+      margin-top: 12px;
+
+      & .memoryBtn {
+        width: 78px;
+        height: 40px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        border: 1px solid #E1E7EF;
+        border-radius: 8px;
+        text-align: center;
+      }
+    }
+  }
+
+  & .productInfoFeatures {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+    width: 100%;
+
+    & .titleFeatures {
+      color: #000000;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+    
+    & .featuresTable {
+      width: 100%;
+      border-collapse: collapse;
+
+      & tr {
+        border-bottom: 1px solid #E1E7EF;
+        
+        &:last-child {
+          border-bottom: none; 
+        }
+      }
+
+      & th, & td {
+        padding: 12px 0; 
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        text-align: left;
+      }
+
+      & th {
+        color: #A6AAB2; 
+        width: 40%;    
+      }
+
+      & td {
+        color: #1B1A1D; 
+      }
+    }
+
+    & .moreLink {
+      color: #396DEF;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+  }
+}

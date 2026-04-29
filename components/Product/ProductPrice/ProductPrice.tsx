@@ -1,3 +1,5 @@
+import styles from "./ProductPrice.module.css";
+
 interface ProductPriceProps {
     price: number;
     discount: number;
@@ -6,20 +8,20 @@ interface ProductPriceProps {
 
 export default function ProductPrice({price, discount, installment}: ProductPriceProps) {
     return(
-        <div className="product-card">
-            <div className="product-card_price-block">
-                <span className="old_price"> {price} ₽</span>
-                <div className="current_price">
+        <div className={styles.productCardAddToCart}>
+            <div className={styles.productCardPriceBlock}>
+                <span className={styles.oldPrice}> {price} ₽</span>
+                <div className={styles.currentPrice}>
                     {price - discount} ₽
                 </div>
             </div>
 
-            <button type="button" className="add-to-cart-btn">
-                <img src="/cart.png" />
+            <button type="button" className={styles.addToCartBtn}>
+                <img src="/cart.png" className={styles.cartIcon}/>
                 <span>В корзину</span>
             </button>
 
-            <div className="installment-info">
+            <div className={styles.installmentInfo}>
                 Доступно <a href="">в рассрочку</a> от {installment} ₽/мес
             </div>
         </div>
