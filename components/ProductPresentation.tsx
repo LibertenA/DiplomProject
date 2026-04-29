@@ -5,14 +5,12 @@ export default function ProductPresentation() {
                 <img src="/product1.png" />
             </div>
 
-            <div className="gallery">
-                <ul>
-                    <li><img src="/product1.png" /> </li>
-                    <li><img src="/product1(2).png" /> </li>
-                    <li><img src="/product1(3).png" /> </li>
-                    <li><img src="/product1(4).png" /> </li>
-                </ul>
-            </div>
+            <ul className="gallery">
+                <li><img src="/product1.png" /> </li>
+                <li><img src="/product1(2).png" /> </li>
+                <li><img src="/product1(3).png" /> </li>
+                <li><img src="/product1(4).png" /> </li>
+            </ul>
         </div>
     )
 }

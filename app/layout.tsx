@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Golos_Text } from "next/font/google";
+import { Golos_Text } from "next/font/google";
 import Header from "@/components/Header"
 //import Footer from "@/components/Footer"
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const golosText = Golos_Text({
   variable: "--font-golos-text",
@@ -33,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${golosText.className} antialiased`}
+        className={`${golosText.variable} antialiased`}
       >
         <Header />
         {children}

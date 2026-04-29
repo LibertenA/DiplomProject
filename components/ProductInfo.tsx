@@ -1,5 +1,3 @@
-import PromoCard from "../components/PromoCard";
-
 interface ProductInfoProps {
     code: number;
     title: string;
@@ -15,37 +13,6 @@ interface ProductInfoProps {
 } 
 
 export default function ProductInfo({code, title, color, memory, cpu, ram, system, display, resolution, weight, language}: ProductInfoProps) {
-    const products = [
-        { 
-            title: "RTX 5090", 
-            price: 350000, 
-            rating: 5, 
-            gpuInterface: "PCIe 5.0", 
-            frequency: "2300 MHz" 
-        },
-        { 
-            title: "RTX 5080", 
-            price: 150000, 
-            rating: 5, 
-            gpuInterface: "PCIe 5.0", 
-            frequency: "2300 MHz" 
-        },
-        { 
-            title: "RTX 5070 Ti", 
-            price: 110000, 
-            rating: 5, 
-            gpuInterface: "PCIe 5.0", 
-            frequency: "2300 MHz" 
-        },
-        { 
-            title: "RX 9070 XT", 
-            price: 88000, 
-            rating: 5, 
-            gpuInterface: "PCIe 5.0", 
-            frequency: "2400 MHz" 
-        }
-    ];
-
     return(
         <div className="product-info">
             <div className="product-code">
@@ -57,39 +24,38 @@ export default function ProductInfo({code, title, color, memory, cpu, ram, syste
             <div className="product-color">
                 Цвет: <span> {color} </span>
 
-                <div className="color_change">
-                    <ul>
-                        <li>
-                            <div className="color"></div>
-                        </li>
-                        <li>
-                            <div className="color"></div>
-                        </li>
-                        <li>
-                            <div className="color"></div>
-                        </li>
-                        <li>
-                            <div className="color"></div>
-                        </li>
-                    </ul>
-                </div>
+                <ul className="color_change">
+                    <li>
+                        <div className="color"></div>
+                    </li>
+                    <li>
+                        <div className="color"></div>
+                    </li>
+                    <li>
+                        <div className="color"></div>
+                    </li>
+                    <li>
+                        <div className="color"></div>
+                    </li>
+                </ul>
             </div>
 
             <div className="product-memory">
                 Объем SSD: <span> {memory} </span>
 
                 <div className="memory_choose">
-                    <button>
+                    <button className="memory_btn">
                         {memory} Гб
                     </button>
-                    <button>
+
+                    <button className="memory_btn">
                         {memory} Гб
                     </button>
                 </div>
             </div>
 
             <div className="product-info__features">
-                <h3>Характеристики</h3>
+                <h3 className="title_features">Характеристики</h3>
 
                 <table className="features-table">
                     <tbody>
@@ -122,46 +88,7 @@ export default function ProductInfo({code, title, color, memory, cpu, ram, syste
 
                 <a href="" className="more-link">Все характеристики</a>
             </div>
-
-            <div className="disription">
-                <h2 className="discription-title">
-
-                </h2>
-                <span>
-
-                </span>
-            </div>
-
-            <div className="accessories_place">
-                <h2>Аксессуары</h2>
-                <div className="product_place">
-                    {products.map((product, index) => (
-                    <PromoCard
-                        key={index} 
-                        title= {`Видеокарта ${product.title}`}
-                        price={product.price}
-                        /*rating={product.rating}
-                        gpuInterface={product.gpuInterface}
-                        frequency={product.frequency}*/
-                    />
-                    ))}
-                </div>
-            </div>
-            <div className="similiar-product_place">
-                <h2>Похожие товары</h2>
-                <div className="product_place">
-                    {products.map((product, index) => (
-                    <PromoCard
-                        key={index} 
-                        title= {`Видеокарта ${product.title}`}
-                        price={product.price}
-                        /*rating={product.rating}
-                        gpuInterface={product.gpuInterface}
-                        frequency={product.frequency}*/
-                    />
-                    ))}
-                </div>
-            </div>
+            
         </div>
     )
 }

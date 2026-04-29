@@ -13,19 +13,20 @@ export default function PromoCard ({ title, price, /*rating, gpuInterface, frequ
                 <img src="/product1.png" className="product_icon"/>
             </div>
 
-            <h3 className="product-card_title">{title}</h3>
-            {/*<p>Оценка: {rating} звезд(ы)</p>*/}
+            <div className="product-card_main">
+                <h3 className="product-card_title">{title}</h3>
+                {/*<p>Оценка: {rating} звезд(ы)</p>*/}
 
-            <div className="product-card_price">
-                <p>{price} ₽</p>                    
+                <p className="product-card_price">{price} ₽</p>                    
             </div>
+            
             {/*<div className="product-card_features">
                 <p>Interface: {gpuInterface}</p>
                 <p>Frequency: {frequency}</p>
             </div>*/}
 
             <button className="product-card_button">
-                <img src="/cart.png" />
+                <img src="/cart.png" className="cart_logo"/>
                 <p>В корзину</p>
             </button>
         </div>

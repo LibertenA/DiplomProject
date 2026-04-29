@@ -30,8 +30,8 @@ export default function MainBar() {
     return (
         <div className="main_bar">
           <div className="header_logo">
-            <img className="logo" src="/logo.png" />
-            <h1 className="main_title">TechStore</h1>
+            {/*<img className="logo" src="/logo.png" />*/}
+            <h1 className="main_title">online:store</h1>
           </div>
 
           <button className="header_catalogbtn">
@@ -40,16 +40,14 @@ export default function MainBar() {
           </button>
 
           <Search />
-
-          <div className="header_actions">
-            <CartButton count={cart}/>
+          
+          <CartButton count={cart}/>
             
-            <button className="enter_btn" onClick={openLoginModal}>
-              <img src="/user.png" className="user_icon"/>
-              <p>Войти</p>
-            </button>
-          </div>
-
+          <button className="enter_btn" onClick={openLoginModal}>
+            <img src="/user.png" className="user_icon"/>
+            Войти
+          </button>
+          
           {isModalOpen && (
             <ModalWindow
               mode={modalMode}
