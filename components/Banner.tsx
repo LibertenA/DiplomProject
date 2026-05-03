@@ -6,9 +6,8 @@ export default function Banner() {
       <div className="banner">
         <div></div>
 
-        <img src="/banner.png" className="banner_img"/>
+        <img src="/banner.png" className="banner_img" />
       </div>
     </div>
-    
   );
 }

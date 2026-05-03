@@ -1,0 +1,75 @@
+.orderPlace {
+  min-height: 264px;
+  width: 308px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-direction: column;
+  background-color: #f3f4f6;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.orderPlaceTitle {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.orderPlaceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.orderPlaceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderPlaceLabel {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.orderPlaceRowTotalPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderPlaceTotalPriceValue {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.purchaseBtn {
+  background-color: #396def;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px 24px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.purchaseBtn:hover {
+  opacity: 0.9;
+}
+
+.purchaseBtnText {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+

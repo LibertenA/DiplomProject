@@ -1,0 +1,36 @@
+.headerSearch {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+  max-width: 670px;
+  height: 40px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.searchImg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.searchInput {
+  flex: 2;
+  height: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #1b1a1d;
+
+  &::placeholder {
+    color: #a6aab2;
+  }
+}

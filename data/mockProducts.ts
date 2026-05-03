@@ -19,7 +19,7 @@ export const mockProducts = [
     { 
         id: 2,
         title: "Apple MacBook Neo 13 (A18 Pro, 6C СPU/5С GPU, 2026)",
-        price: 74990,
+        price: 79990,
         color: "синий индиго",
         memory: 256,
         ram: 8,
@@ -36,7 +36,7 @@ export const mockProducts = [
     { 
         id: 3,
         title: "Apple MacBook Neo 13 (A18 Pro, 6C СPU/5С GPU, 2026)",
-        price: 74990,
+        price: 79990,
         color: "синий индиго",
         memory: 256,
         ram: 8,
@@ -53,7 +53,7 @@ export const mockProducts = [
     { 
         id: 4,
         title: "Apple MacBook Neo 13 (A18 Pro, 6C СPU/5С GPU, 2026)",
-        price: 74990,
+        price: 79990,
         color: "синий индиго",
         memory: 256,
         ram: 8,

@@ -1,16 +1,12 @@
-import ProductsList from "@/components/ProductsList";
-import CartProductsPlace from "@/components/CartProductsPlace";
+import { ProductsList } from "@/components/ProductList/";
+import { CartProductsPlace } from "@/components/CartPage";
 
 export default function Page() {
-    return(
-        <div>
-            <CartProductsPlace />
+  return (
+    <div>
+      <CartProductsPlace />
 
-            <div className="recommendation_place">
-                <h2>Рекомендации</h2>
-                <ProductsList />
-            </div>
-        </div>
-    )
-
+      <ProductsList title="Рекомендации" />
+    </div>
+  );
 }
