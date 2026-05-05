@@ -4,13 +4,24 @@ import {
   ProductPrice,
 } from "@/components/ProductPage/";
 import styles from "./ProductInfo.module.css";
+interface ColorOption {
+  id: string;
+  color: string;
+  colorCode: string;
+}
+
+interface MemoryOption {
+  id: string;
+  memory: number;
+}
 
 interface ProductInfoProps {
   product: {
     id: number;
     title: string;
-    color: string;
-    memory: number;
+    images: string[];
+    color: ColorOption[];
+    memory: MemoryOption[];
     cpu: string;
     ram: number;
     system: string;
@@ -30,7 +41,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       <div className={styles.productLeftPlace}>
         
         <div className={styles.productMainPlace}>
-          <ProductPresentation />
+          <ProductPresentation images={product.images}/>
           <ProductDetails {...product} />
         </div>
         

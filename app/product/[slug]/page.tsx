@@ -2,6 +2,7 @@ import { ProductsList } from "@/components/ProductList";
 import { mockProducts } from "@/data/mockProducts";
 import DirectoryCatalog from "@/components/DirectoryCatalog";
 import { ProductInfo } from "@/components/ProductPage";
+import AIChat from "@/components/AIChat";
 
 type Props = {
   params: Promise<{
@@ -24,6 +25,8 @@ export default async function Page({ params }: Props) {
       <ProductInfo product={product} />
 
       <ProductsList title="Аксессуары" />
+
+      {/*<AIChat />*/}
     </div>
   );
 }

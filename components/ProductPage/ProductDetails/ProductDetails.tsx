@@ -1,10 +1,24 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./ProductDetails.module.css";
+
+interface ColorOption {
+  id: string;
+  color: string;
+  colorCode: string;
+}
+
+interface MemoryOption {
+  id: string;
+  memory: number;
+}
 
 interface ProductDetailsProps {
   id: number;
   title: string;
-  color: string;
-  memory: number;
+  color: ColorOption[]; 
+  memory: MemoryOption[];
   cpu: string;
   ram: number;
   system: string;
@@ -27,6 +41,10 @@ export default function ProductDetails({
   weight,
   language,
 }: ProductDetailsProps) {
+
+  const [pickedMemory, setPickedMemory] = useState(memory[0]);
+  const [pickedColor, setPickedColor] = useState(color[0]);
+
   return (
     <div className={styles.ProductDetails}>
       <div className={styles.productCode}>
@@ -37,36 +55,51 @@ export default function ProductDetails({
       </div>
       
       <h2 className={styles.productTitle}>
-        {title}, {ram} ГБ, {memory} ГБ SSD, {color}
+        {title}, {ram} ГБ, {pickedMemory.memory} ГБ SSD, {pickedColor.color}
       </h2>
       <div className={styles.productColor}>
         <span className={styles.labelColor}>Цвет:
-          <span className={styles.valueColor}> {color} </span>
+          <span className={styles.valueColor}> {pickedColor.color} </span>
         </span>
         <ul className={styles.colorChange}>
-          <li className={styles.colorChangeItemActive}>
-            <div className={styles.color}></div>
-          </li>
-          <li className={styles.colorChangeItem}>
-            <div className={styles.color}></div>
-          </li>
-          <li className={styles.colorChangeItem}>
-            <div className={styles.color}></div>
-          </li>
-          <li className={styles.colorChangeItem}>
-            <div className={styles.color}></div>
-          </li>
+          {color.map((item) => {
+            const isActive = item.id === pickedColor.id;
+            return (
+                <li 
+                  key={item.id} 
+                  className={isActive ? styles.colorItemActive : styles.colorItem}
+                  onClick={() => setPickedColor(item)} 
+                >
+                  <button 
+                    className={styles.color} 
+                    style={{ backgroundColor: item.colorCode }}
+                  ></button>
+                </li>
+              )
+            }  
+          )}
+          
         </ul>
       </div>
 
       <div className={styles.productMemory}>
         <span className={styles.label}>Объем SSD:
-          <span className={styles.value}> {memory} </span>
+          <span className={styles.value}> {pickedMemory.memory} </span>
         </span>
         
         <div className={styles.memoryChoose}>
-          <button className={styles.memoryBtn}>{memory} Гб</button>
-          <button className={styles.memoryBtn}>{memory} Гб</button>
+          {memory.map((memory) => {
+            const isActive = memory.id === pickedMemory.id;
+            return (
+                <button 
+                  key={memory.id}
+                  className={isActive ? styles.memoryActiveBtn: styles.memoryBtn} 
+                  onClick={() => setPickedMemory(memory)}
+                  >{memory.memory} Гб
+                </button>
+              )
+            }   
+          )}
         </div>
       </div>
 
@@ -81,7 +114,7 @@ export default function ProductDetails({
             <tr className={styles.featuresTableRow}>
               <th className={styles.featuresTableTh}>Память</th>
               <td className={styles.featuresTableTd}>
-                ОЗУ/{ram} ГБ, SSD/{memory} ГБ
+                ОЗУ/{ram} ГБ, SSD/{pickedMemory.memory} ГБ
               </td>
             </tr>
             <tr className={styles.featuresTableRow}>

@@ -25,7 +25,7 @@ export default function CartProductsPlace() {
         <h2 className={styles.cartTitle}>Корзина</h2>
 
         {mockProducts.map((product) => (
-          <CartProduct {...product} />
+          <CartProduct key={product.id} {...(product as any)} />
         ))}
       </div>
 

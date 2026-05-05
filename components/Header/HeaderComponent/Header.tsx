@@ -6,9 +6,9 @@ import MainBar from "../MainBar";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <TopBar />
-      <MainBar />
-    </header>
+      <header className="container">
+          <TopBar />
+          <MainBar />
+      </header>
   );
 }

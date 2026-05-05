@@ -24,13 +24,12 @@ body {
   font-family: var(--font-golos-text), sans-serif;
   margin: 0 auto;
   box-sizing: border-box;
-  width: 1440px; 
 }
 
 .container {
   max-width: 1440px; 
   margin: 0 auto;    
-  padding: 0 20px;  
+  padding: 0 80px;  
   width: 100%;       
 }
 
@@ -69,7 +68,7 @@ body {
 
 
 
-/*.ai-chat-toggle {
+.ai-chat-toggle {
   position: fixed;
   right: 24px;
   bottom: 24px;
@@ -236,4 +235,4 @@ body {
     width: 58px;
     height: 58px;
   }
-}*/
+}

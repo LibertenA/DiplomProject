@@ -29,36 +29,38 @@ export default function MainBar() {
   }
 
   return (
-    <div className={styles.mainBar}>
-      <div className={styles.headerLogo}>
-        <h1 className={styles.mainTitle}>online:store</h1>
+    <div className="container">
+      <div className={styles.mainBar}>
+        <div className={styles.headerLogo}>
+          <h1 className={styles.mainTitle}>online:store</h1>
+        </div>
+
+        <button className={styles.headerCatalogBtn}>
+          <img
+            className={styles.catalogBtnIcon}
+            src="/catalogbtn.png"
+            alt="catalog"
+          />
+          <span className={styles.catalogBtnName}>Каталог</span>
+        </button>
+
+        <Search />
+        <CartButton count={cart} />
+
+        <button className={styles.enterBtn} onClick={openLoginModal}>
+          <img src="/user.png" className={styles.userIcon} alt="user" />
+          <span className={styles.enterBtnText}>Войти</span>
+        </button>
+
+        {isModalOpen && (
+          <ModalWindow
+            mode={modalMode}
+            onClose={closeModal}
+            onSwitchToRegister={switchToRegister}
+            onSwitchToLogin={switchToLogin}
+          />
+        )}
       </div>
-
-      <button className={styles.headerCatalogBtn}>
-        <img
-          className={styles.catalogBtnIcon}
-          src="/catalogbtn.png"
-          alt="catalog"
-        />
-        <span className={styles.catalogBtnName}>Каталог</span>
-      </button>
-
-      <Search />
-      <CartButton count={cart} />
-
-      <button className={styles.enterBtn} onClick={openLoginModal}>
-        <img src="/user.png" className={styles.userIcon} alt="user" />
-        <span className={styles.enterBtnText}>Войти</span>
-      </button>
-
-      {isModalOpen && (
-        <ModalWindow
-          mode={modalMode}
-          onClose={closeModal}
-          onSwitchToRegister={switchToRegister}
-          onSwitchToLogin={switchToLogin}
-        />
-      )}
     </div>
   );
 }

@@ -26,7 +26,7 @@ export default function RootLayout({
         className={`${golosText.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="container">{children}</main>
         
         {/*<Footer />*/}
       </body>

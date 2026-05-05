@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import { ProductsList } from "../components/ProductList/";
-/*import AIChat from "./components/AIChat";*/
+import AIChat from "@/components/AIChat";
 
 export default function Page() {
   return (
