@@ -70,7 +70,6 @@ export const mockProducts = [
     memory: [ { id: 'm1', memory: 256}, { id: 'm2', memory: 512} ],
     ram: 8,
     discount: 5000,
-    installment: 4166,
     count: 0,
     cpu: "Apple M4 10-core (4 + 6)",
     system: "macOS",
@@ -290,7 +289,7 @@ export const mockProducts = [
     discount: 0,
     count: 0,
     gpu_tech: "PSSR Upscaling",
-    ssd: "2TB",
+    memory: [{ id: 'm1', memory: 2048 }],
     images: ["/products/product601.png", "/products/product601(2).png"]
   },
   {

@@ -29,7 +29,6 @@ export default function CartProductsPlace() {
     cpu: product.cpu ?? undefined,
     gpu: product.gpu ?? undefined,
     gpu_tech: product.gpu_tech ?? undefined,
-    ssd: product.ssd ?? undefined,
     display: product.display ?? product.screen ?? undefined,
     resolution: product.resolution ?? undefined,
     refresh_rate: product.refresh_rate ?? undefined,

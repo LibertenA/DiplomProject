@@ -22,7 +22,6 @@ interface CartProductProps {
   refresh_rate?: string | number;
   gpu?: string;
   gpu_tech?: string;
-  ssd?: string | number;
   battery?: string;
   ios?: string;
   os?: string;
@@ -58,7 +57,6 @@ interface CartProductProps {
   protocol?: string;
   unlock?: string;
   efficiency?: string;
-  ssd_capacity?: string;
   backward_compatible?: boolean;
   chip?: string;
   curve?: string;
