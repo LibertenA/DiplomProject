@@ -4,6 +4,7 @@ import {
   ProductPrice,
 } from "@/components/ProductPage/";
 import styles from "./ProductInfo.module.css";
+
 interface ColorOption {
   id: string;
   color: string;
@@ -71,7 +72,6 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       <ProductPrice
         price={product.price}
         discount={product.discount}
-        installment={product.installment}
       />
     </div>
   );

@@ -21,6 +21,11 @@
   line-height: 40px;
   color: #1b1a1d;
   margin: 0;
+
+  & a {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .headerCatalogBtn {
@@ -39,7 +44,7 @@
   border: none;
 
   &:hover {
-    opacity: 0.7;
+    background-color: #2e5bc7;
   }
 
 }

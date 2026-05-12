@@ -6,8 +6,8 @@
 }
 
 .mainIcon {
-  max-width: 454px;
-  width: 100%;
+  width: 454px;
+  height: 470px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +54,7 @@
   cursor: pointer;
   border: 1px solid #e1e7ef;
   border-radius: 8px;
-  padding: 20px 12px;
+  padding: 24px 12px;
 }
 
 .galleryImg {

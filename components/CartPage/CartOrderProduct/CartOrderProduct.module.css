@@ -1,6 +1,7 @@
 .orderPlace {
   min-height: 264px;
-  width: 308px;
+  max-width: 308px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 24px;
@@ -8,6 +9,10 @@
   background-color: #f3f4f6;
   border-radius: 16px;
   padding: 24px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .orderPlaceTitle {
@@ -62,7 +67,7 @@
 }
 
 .purchaseBtn:hover {
-  opacity: 0.9;
+  background-color: #2e5bc7;
 }
 
 .purchaseBtnText {

@@ -6,8 +6,13 @@ import styles from "./ProductPresentation.module.css";
 interface ProductPresentationProps {
   images: string[];
 }
+
 export default function ProductPresentation({images}: ProductPresentationProps) {
   const [pickedImage, setPickedImage] = useState(0);
+
+  if (!images?.length) {
+    return <h4>Нет данных</h4>;
+  }
 
   return (
     <div className={styles.placePresentation}>

@@ -3,8 +3,9 @@
   padding: 24px;
   border-radius: 16px;
   position: sticky;
-  top: 20px;
+  top: 24px;
   align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .productCardPriceBlock {
@@ -42,6 +43,28 @@
   margin-top: 24px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: #2e5bc7;
+  }
+}
+
+.addedToCartBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 79px;
+  background-color: #1B1A1D;
+  border-radius: 8px;
+  margin-top: 24px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #020202;
+  }
 }
 
 .btnText {

@@ -5,13 +5,13 @@ import AIChat from "@/components/AIChat";
 export default function Page() {
   return (
     <div>
-      <Banner />
+        <Banner />
 
-      <ProductsList title="Специально для вас" />
+        <ProductsList title="Специально для вас" />
 
-      <ProductsList title="Рекомендации" />
+        <ProductsList title="Рекомендации" />
 
-      {/*<AIChat />*/}
+        {/*<AIChat />*/}
     </div>
   );
 }

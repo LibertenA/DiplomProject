@@ -3,6 +3,8 @@
   gap: 16px;
   align-items: center;
   justify-content: center;
+  min-width: 956px;
+  width: 100%;
 }
 
 .cartProductIcon {

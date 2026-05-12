@@ -12,11 +12,13 @@ export default function ProductsList({ title }: ProductsListProps) {
       <h2 className={styles.listTitle}>{title}</h2> 
       
       <div className={styles.productList}>
-        {mockProducts.map((product) => (
+        {mockProducts.slice(0, 4).map((product) => (
           <ProductListCard 
             key={product.id} 
             title={product.title} 
             price={product.price} 
+            discount={product.discount}
+            images={product.images[0]}
           />
         ))}
       </div>

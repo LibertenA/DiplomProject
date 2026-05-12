@@ -42,8 +42,12 @@ export default function ProductDetails({
   language,
 }: ProductDetailsProps) {
 
-  const [pickedMemory, setPickedMemory] = useState(memory[0]);
-  const [pickedColor, setPickedColor] = useState(color[0]);
+  const [pickedMemory, setPickedMemory] = useState(memory?.[0]);
+  const [pickedColor, setPickedColor] = useState(color?.[0]);
+
+  if (!memory?.length || !color?.length) {
+    return <h4 className={styles.error}>Нет данных</h4>;
+  }
 
   return (
     <div className={styles.ProductDetails}>
@@ -55,7 +59,7 @@ export default function ProductDetails({
       </div>
       
       <h2 className={styles.productTitle}>
-        {title}, {ram} ГБ, {pickedMemory.memory} ГБ SSD, {pickedColor.color}
+        {title}
       </h2>
       <div className={styles.productColor}>
         <span className={styles.labelColor}>Цвет:

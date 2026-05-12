@@ -5,7 +5,6 @@
   justify-content: center;
   gap: 16px;
   margin-top: 24px;
-  padding: 0 80px;
 }
 
 .productLeftPlace {
@@ -38,5 +37,5 @@
   font-weight: 400;
   line-height: 20px;
   color: #1b1a1d;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }

@@ -30,9 +30,7 @@ export default function CartOrderProduct({
 
         <div className={styles.orderPlaceRowTotalPrice}>
           <span className={styles.orderPlaceLabel}>К оплате</span>
-          <span className={styles.orderPlaceTotalPriceValue}>
-            {totalPrice} ₽
-          </span>
+          <span className={styles.orderPlaceTotalPriceValue}> {totalPrice} ₽</span>
         </div>
       </div>
 

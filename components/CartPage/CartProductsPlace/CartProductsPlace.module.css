@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   gap: 16px;
   margin-top: 64px;
-  padding: 0 80px;
 }
 
-.cartContainer {
+.cartContainerLayout {
   height: auto;
   display: flex;
   flex-direction: column;

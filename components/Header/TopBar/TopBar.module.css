@@ -1,7 +1,9 @@
 .topBar {
-  width: 100%;
-  height: 40px;
   background-color: #1b1a1d;
+}
+
+.topBarInner {
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;

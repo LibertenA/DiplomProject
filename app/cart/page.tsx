@@ -4,9 +4,9 @@ import { CartProductsPlace } from "@/components/CartPage";
 export default function Page() {
   return (
     <div>
-      <CartProductsPlace />
+        <CartProductsPlace />
 
-      <ProductsList title="Рекомендации" />
+        <ProductsList title="Рекомендации" />
     </div>
   );
 }

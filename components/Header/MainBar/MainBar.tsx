@@ -29,10 +29,10 @@ export default function MainBar() {
   }
 
   return (
-    <div className="container">
+    <div className="container-layout">
       <div className={styles.mainBar}>
         <div className={styles.headerLogo}>
-          <h1 className={styles.mainTitle}>online:store</h1>
+          <h1 className={styles.mainTitle}><a href="/">online:store</a></h1>
         </div>
 
         <button className={styles.headerCatalogBtn}>

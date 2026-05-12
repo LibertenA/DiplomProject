@@ -22,11 +22,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-golos-text), sans-serif;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
-.container {
+.container-layout {
   max-width: 1440px; 
   margin: 0 auto;    
   padding: 0 80px;  
@@ -35,7 +34,6 @@ body {
 
 .banner_place{
   width: 100%;
-  padding: 0 80px;
   margin-top: 24px 0;
 }
 
@@ -56,7 +54,6 @@ body {
 
 .directory_catalog{
   margin-top: 24px;
-  padding: 0 80px;
 
   & a {
     color: #A6AAB2;
