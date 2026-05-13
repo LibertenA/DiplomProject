@@ -178,7 +178,7 @@ export default function ProductDetails( props : ProductDetailsProps) {
             <tr className={styles.featuresTableRow}>
               <th className={styles.featuresTableTh}>Память</th>
               <td className={styles.featuresTableTd}>
-                ОЗУ/{props.ram} ГБ {pickedMemory ? `, Mem/${pickedMemory.memory} ГБ` : props.memory ? `, Mem/${props.memory} ГБ` : ""}
+                ОЗУ/{props.ram} ГБ, {pickedMemory ? `Mem/${pickedMemory.memory} ГБ` : props.memory ? `Mem/${props.memory} ГБ` : ""}
               </td>
             </tr>
             <tr className={styles.featuresTableRow}>

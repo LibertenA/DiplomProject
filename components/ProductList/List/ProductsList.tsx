@@ -14,7 +14,7 @@ export default function ProductsList({ title }: ProductsListProps) {
       <div className={styles.productList}>
         {mockProducts.slice(0, 4).map((product) => (
           <ProductListCard 
-            key={product.id} 
+            id={product.id} 
             title={product.title} 
             price={product.price} 
             discount={product.discount}

@@ -11,6 +11,12 @@
   max-height: 320px;
   background-color: #f3f4f6;
   padding: 77px 34px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:active{
+    transform: scale(95%);
+  }
 }
 
 .productIcon {
@@ -23,7 +29,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 
 .productCardTitle {
@@ -33,6 +38,7 @@
     color: #161616;
     margin: 0;
 }
+
 .ProductPricePlace {
   display: flex;
   flex-direction: row;

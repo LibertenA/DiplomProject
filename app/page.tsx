@@ -11,7 +11,7 @@ export default function Page() {
 
         <ProductsList title="Рекомендации" />
 
-        {/*<AIChat />*/}
+        <AIChat />
     </div>
   );
 }

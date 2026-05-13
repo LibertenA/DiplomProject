@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from "./CartProduct.module.css";
+import { useRouter } from "next/navigation";
 
 type Action =  { type: 'INCREMENT'; id: number } | { type: 'DECREMENT'; id: number } | { type: 'REMOVE'; id: number };
 
@@ -101,9 +102,15 @@ export default function CartProduct(props: CartProductProps) {
 
   const { dispatch } = props;
 
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/product/${props.id}`); 
+  }  
+
   return (
     <div className={styles.cartProductPlace}>
-      <div className={styles.cartProductIcon}>
+      <div className={styles.cartProductIcon} onClick={handleClick}>
         <img src={props.images} alt={props.title} className={styles.cartProductIconImg}/>
       </div>
 

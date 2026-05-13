@@ -12,6 +12,12 @@
   height: 146px;
   background-color: #f3f4f6;
   padding: 28px 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:active{
+    transform: scale(95%);
+  }
 }
 
 .cartProductIconImg {
