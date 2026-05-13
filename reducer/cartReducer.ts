@@ -5,7 +5,6 @@ export type CartItem = {
   count: number;
   title: string;
   images: string;
-  [key: string]: any;
 };
 
 export type State = CartItem[] ;
