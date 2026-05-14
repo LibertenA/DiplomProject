@@ -15,93 +15,21 @@ interface MemoryOption {
 }
 
 interface ProductDetailsProps {
-    id: number;
-    title: string;
-    price: number;
-    discount: number;
-    images: string[];
-    color?: ColorOption[];
-    memory?: MemoryOption[];
-    language?: string;
-    ram?: number;
-    cpu?: string;
-    display?: string | number;
-    display_size?: string;
-    resolution?: string;
-    refresh_rate?: string | number;
-    gpu?: string;
-    gpu_tech?: string;
-    battery?: string;
-    ios?: string;
-    os?: string;
-    ai_features?: string;
-    ai_camera?: string;
-    ai_sensing?: string;
-    folding_type?: string;
-    expanded_display?: string;
-    lights?: string;
-    feature?: string;
-    features?: string[];
-    weight?: number;
-    material?: string;
-    pressure?: number;
-    milk_system?: string;
-    screen?: string;
-    ai_vision?: string;
-    modes?: number;
-    pressure_cook?: boolean;
-    steeping_timer?: boolean;
-    steam?: boolean;
-    diagonal?: number;
-    connection?: string;
-    peak_brightness?: string;
-    local_dimming?: string;
-    portability?: string;
-    auto_keystone?: boolean;
-    suction?: string;
-    mop_washing?: string;
-    airflow?: string;
-    noise?: string;
-    assistant?: string;
-    protocol?: string;
-    unlock?: string;
-    efficiency?: string;
-    backward_compatible?: boolean;
-    chip?: string;
-    curve?: string;
-    spatial_audio?: boolean;
-    sensor?: string;
-    attachments?: number;
-    versatility?: string;
-    heat_modes?: number;
-    charging?: string;
-    blades?: string;
-    feedback?: string;
-    base?: string;
-    amplitude?: string;
-    bt_app?: boolean;
-    anc?: string;
-    immersion_mode?: boolean;
-    bt?: string;
-    power?: string;
-    freq_range?: string;
-    wired_inputs?: string;
-    af?: string;
-    camera?: string;
-    flight_time?: string;
-    video?: string;
-    hypersmooth?: string;
-    ibis?: string;
-    video_360?: string;
-    capacity?: string;
-    auto_dos?: string;
-    wifi?: boolean;
-    width?: string;
-    handmade?: boolean;
-    antimicrobial?: string;
-    fresher_zones?: number;
-    heat_pump?: boolean;
-    self_cleaning?: boolean;
+  id: number;
+  title: string;
+  price: number;
+  discount: number;
+  count: number;
+  images: string[];
+  color?: ColorOption[];
+  memory?: MemoryOption[];
+  display?: string; 
+  cpu?: string;
+  system?: string;
+  features?: string;
+  ram?: number;
+  weight?: number;
+  wifi?: boolean;
 }
 
 export default function ProductDetails( props : ProductDetailsProps) {
@@ -183,12 +111,12 @@ export default function ProductDetails( props : ProductDetailsProps) {
             </tr>
             <tr className={styles.featuresTableRow}>
               <th className={styles.featuresTableTh}>ОС</th>
-              <td className={styles.featuresTableTd}>{props.os}</td>
+              <td className={styles.featuresTableTd}>{props.system}</td>
             </tr>
             <tr className={styles.featuresTableRow}>
               <th className={styles.featuresTableTh}>Экран</th>
               <td className={styles.featuresTableTd}>
-                {props.display}" ({props.resolution})
+                {props.display}" ({props.display})
               </td>
             </tr>
             <tr className={styles.featuresTableRow}>
@@ -196,8 +124,8 @@ export default function ProductDetails( props : ProductDetailsProps) {
               <td className={styles.featuresTableTd}>{props.weight} кг</td>
             </tr>
             <tr className={styles.featuresTableRowLast}>
-              <th className={styles.featuresTableTh}>Раскладка клавиатуры</th>
-              <td className={styles.featuresTableTd}>{props.language}</td>
+              <th className={styles.featuresTableTh}>Особенности</th>
+              <td className={styles.featuresTableTd}>{props.features}</td>
             </tr>
           </tbody>
         </table>

@@ -27,7 +27,8 @@ export default function ProductPresentation({images}: ProductPresentationProps) 
             return (
                 <li 
                   key={index} 
-                  className={isActive ? styles.galleryItemActive : styles.galleryItem}
+                  className={`${styles.galleryItem} ${isActive ? styles.galleryItemActive : ''}`}
+
                   onClick={() => setPickedImage(index)} 
                 >
                   <img src={url} 

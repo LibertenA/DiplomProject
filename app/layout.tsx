@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Golos_Text } from "next/font/google";
-import { Header } from "@/components/Header/"
+import { Header } from "@/components/Header/";
+import { CartProvider } from "@/context/CartContext";
 //import Footer from "@/components/Footer"
 import "./globals.css";
 
@@ -22,13 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        className={`${golosText.variable} antialiased`}
-      >
-        <Header />
-        <main className="container-layout">{children}</main>
-        
-        {/*<Footer />*/}
+      <body className={`${golosText.variable} antialiased`} >
+        <CartProvider>
+          <Header />
+          <main className="container-layout">{children}</main>
+          
+          {/*<Footer />*/}
+        </CartProvider> 
       </body>
     </html>
   );

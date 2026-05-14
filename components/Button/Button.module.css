@@ -1,0 +1,38 @@
+.btnText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.cartIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.addToCartBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #396def;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+
+  &:hover {
+    background-color: #2e5bc7;
+  }
+}
+
+.addedToCartBtn {
+  background-color: #1B1A1D;
+  
+  &:hover {
+    background-color: #020202;
+  }
+}

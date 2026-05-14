@@ -1,10 +1,7 @@
 "use client"
 
-import React from 'react';
 import styles from "./CartProduct.module.css";
 import { useRouter } from "next/navigation";
-
-type Action =  { type: 'INCREMENT'; id: number } | { type: 'DECREMENT'; id: number } | { type: 'REMOVE'; id: number };
 
 interface CartProductProps {
   id: number;
@@ -12,14 +9,14 @@ interface CartProductProps {
   price: number;
   discount: number;
   count: number;
-  images: string; 
-  dispatch: React.Dispatch<Action>;
+  image: string; 
+  Increment: (id: number) => void;
+  Decrement: (id: number) => void;
+  Remove: (id: number) => void;
 }
 
 
 export default function CartProduct(props: CartProductProps) { 
-
-  const { dispatch } = props;
 
   const router = useRouter();
 
@@ -30,7 +27,7 @@ export default function CartProduct(props: CartProductProps) {
   return (
     <div className={styles.cartProductPlace}>
       <div className={styles.cartProductIcon} onClick={handleClick}>
-        <img src={props.images} alt={props.title} className={styles.cartProductIconImg}/>
+        <img src={props.image} alt={props.title} className={styles.cartProductIconImg}/>
       </div>
 
       <div className={styles.cartProductInfo}>
@@ -41,7 +38,7 @@ export default function CartProduct(props: CartProductProps) {
       </div>
 
       <div className={styles.cartProductCounter}>
-        <button type="button" className={styles.counterBtn} onClick={() => dispatch({ type: 'DECREMENT', id: props.id })}>
+        <button type="button" className={styles.counterBtn} onClick={() => props.Decrement(props.id )}>
           <img src="/minus.png" alt="minus" />
         </button>
         <input
@@ -50,7 +47,7 @@ export default function CartProduct(props: CartProductProps) {
           value={props.count} 
           readOnly
         />
-        <button type="button" className={styles.counterBtn} onClick={() => dispatch({ type: 'INCREMENT', id: props.id })}>
+        <button type="button" className={styles.counterBtn} onClick={() => props.Increment(props.id )}>
           <img src="/plus.png" alt="plus" />
         </button>
       </div>

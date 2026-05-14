@@ -5,7 +5,10 @@
   position: sticky;
   top: 24px;
   align-self: flex-start;
-  flex-shrink: 0;
+  justify-content: stretch;
+  width: 308px;
+  display: flex;
+  flex-direction: column;
 }
 
 .productCardPriceBlock {
@@ -29,56 +32,6 @@
   font-weight: 500;
   line-height: 36px;
   display: block;
-}
-
-.addToCartBtn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 79px;
-  background-color: #396def;
-  border-radius: 8px;
-  margin-top: 24px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #2e5bc7;
-  }
-}
-
-.addedToCartBtn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 79px;
-  background-color: #1B1A1D;
-  border-radius: 8px;
-  margin-top: 24px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #020202;
-  }
-}
-
-.btnText {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.cartIcon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
 }
 
 .installmentInfo {

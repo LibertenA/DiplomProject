@@ -1,47 +1,103 @@
-export type CartItem = {
+import { mockProducts } from '@/data/mockProducts'; 
+
+export type Product = {
   id: number;
+  title: string;
   price: number;
   discount: number;
   count: number;
-  title: string;
-  images: string;
+  image: string;
+  color?: string;
+  memory?: string;
+  display?: string; 
+  cpu?: string;
+  system?: string;
+  features?: string;
+  ram?: number;
+  weight?: number;
+  wifi?: boolean;
 };
 
-export type State = CartItem[] ;
+export type CartItem = {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  count: number;
+  discount: number;
+};
 
-export type Action = { type: 'ADD';  payload: CartItem } | { type: 'INCREMENT'; id: number } | { type: 'DECREMENT'; id: number } | { type: 'REMOVE'; id: number };
+export type CartState = {
+  items: CartItem[];
+};
 
-export function cartReducer(state: State, action: Action): State {
+const defaultCartItems: CartItem[] = mockProducts.filter(product => product.count > 0).map(product => ({
+  id: product.id,
+  title: product.title,
+  price: product.price,
+  discount: product.discount,
+  count: product.count,
+  image: product.images[0],
+}));
+
+
+export const initialState: CartState = {
+  items: defaultCartItems 
+};
+
+export type Action = { type: 'ADD';  payload: Product  } | { type: 'INCREMENT'; payload: number } | { type: 'DECREMENT'; payload: number } | { type: 'REMOVE'; payload: number };
+
+export function cartReducer(state: CartState, action: Action): CartState {
   switch (action.type) {
     case 'ADD':
-      const existingItem = state.find(item => item.id === action.payload.id);
+      const product = action.payload;
+
+      const existingItem = state.items.find(item => item.id === product.id);
 
       if (!existingItem) {
-        return [...state, { ...action.payload, count: 1 }];
+        return {
+          ...state, items: [...state.items, { ...product, count: 1 }]
+        };
       }
 
-      return state;
+      const newItem: CartItem = {
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        image: product.image,
+        count: product.count || 1,
+        discount: product.discount
+      };
+
+      return {
+        ...state,
+        items: [...state.items, newItem]
+      };
 
     case 'INCREMENT':
-      return state.map(item =>
-        item.id === action.id ? { ...item, count: item.count + 1 } : item
-      );
+      return { ...state, 
+        items: state.items.map(item =>
+        item.id === action.payload ? { ...item, count: item.count + 1 } : item
+      )}
 
     case 'DECREMENT':
-      const targetItem = state.find(item => item.id === action.id);
+      const targetItem = state.items.find(item => item.id === action.payload);
 
       if (!targetItem) return state;
 
       if (targetItem.count <= 1) {
-        return state.filter(item => item.id !== action.id);
+        return{ ...state, 
+        items: state.items.filter(item => item.id !== action.payload)};
       }
 
-      return state.map(item =>
-        item.id === action.id ? { ...item, count: item.count - 1 } : item
-      );
+      return { ...state, 
+        items:state.items.map(item =>
+        item.id === action.payload ? { ...item, count: item.count - 1 } : item
+      )}
 
     case 'REMOVE':
-      return state.filter(item => item.id !== action.id);
+      return { ...state, 
+        items: state.items.filter(item => item.id !== action.payload)}
 
     default:
       return state;

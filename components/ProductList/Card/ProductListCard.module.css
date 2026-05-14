@@ -5,12 +5,12 @@
 }
 
 .productCardIcon {
-  width: 100%;
-  min-width: 308px;
-  height: 100%;
-  max-height: 320px;
+  width: 308px;
+  height: 320px;
   background-color: #f3f4f6;
-  padding: 77px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease;
 
@@ -21,7 +21,7 @@
 
 .productIcon {
   width: 100%;
-  height: 100%;
+  max-width: 240px;
   object-fit: contain;
 }
 
@@ -38,6 +38,7 @@
     color: #161616;
     margin: 0;
     min-height: 40px;
+    cursor: pointer;
 }
 
 .ProductPricePlace {
@@ -62,4 +63,9 @@
     color: #A6AAB2;
     margin: 0;
     text-decoration: line-through;
+}
+
+.btnPlace {
+  display: grid;
+  max-width: 151px;
 }
