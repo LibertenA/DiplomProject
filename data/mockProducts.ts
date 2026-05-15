@@ -5,7 +5,7 @@ export const mockProducts = [
     title: "Samsung Galaxy Z Fold 8 Ultra (AI Edition, 2026)",
     price: 199990,
     discount: 15000,
-    count: 1,
+    count: 0,
     color: [
       { id: 'v1', color: 'Титановый серый', colorCode: '#7D7D7D' },
       { id: 'v2', color: 'Фантомный черный', colorCode: '#1A1A1A' }

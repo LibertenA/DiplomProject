@@ -5,6 +5,8 @@ import Search from "../SearchComponent";
 import CartButton from "../CartButtonComponent";
 import ModalWindow from "../ModalWindow";
 import styles from "./MainBar.module.css";
+import Link from 'next/link';
+
 
 export default function MainBar() {
   const cart = 0;
@@ -32,7 +34,7 @@ export default function MainBar() {
     <div className="container-layout">
       <div className={styles.mainBar}>
         <div className={styles.headerLogo}>
-          <h1 className={styles.mainTitle}><a href="/">online:store</a></h1>
+          <h1 className={styles.mainTitle}><Link href="/">online:store</Link></h1>
         </div>
 
         <button className={styles.headerCatalogBtn}>
@@ -45,7 +47,7 @@ export default function MainBar() {
         </button>
 
         <Search />
-        <CartButton count={cart} />
+        <CartButton />
 
         <button className={styles.enterBtn} onClick={openLoginModal}>
           <img src="/user.png" className={styles.userIcon} alt="user" />

@@ -25,7 +25,6 @@ export default function Button({ product }: ProductButtonProps) {
   const [addedToCart, setAddedToCart] = useState(false);
 
   const handleClick = () => {
-    console.log("Добавляемый товар:", product); 
     if (!addedToCart) {
       add(product),
       setAddedToCart(true)
@@ -34,7 +33,7 @@ export default function Button({ product }: ProductButtonProps) {
     };
   }  
 
-  const buttonClass = `${styles.addToCartBtn} ${addedToCart ? styles.addedToCartBtn :  ""}`;
+  const buttonClass = `${styles.addToCartBtn} ${(addedToCart || product.count >= 1) ? styles.addedToCartBtn :  ""}`;
 
   return(
       <button className={buttonClass} onClick={handleClick}>
