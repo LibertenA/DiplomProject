@@ -11,9 +11,6 @@ export default function CartProductsPlace() {
       totalPrice,
       totalDiscount,
       totalCount,
-      increment,
-      decrement,
-      remove
     } = useCart();
 
   return (
@@ -24,10 +21,7 @@ export default function CartProductsPlace() {
         {items.map((item) => (
           <CartProduct 
             key={item.id} 
-            {...item} 
-            Increment={increment}
-            Decrement={decrement}
-            Remove={remove}/>
+            {...item} />
         ))}
       </div>
 

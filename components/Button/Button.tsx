@@ -1,5 +1,6 @@
+"use client";
+
 import { useRouter  } from 'next/navigation';
-import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import styles from "./Button.module.css";
 
@@ -18,22 +19,21 @@ interface ProductButtonProps {
 
 export default function Button({ product }: ProductButtonProps) {
 
-  const { add } = useCart();
+  const {items, add } = useCart();
 
   const router = useRouter();
 
-  const [addedToCart, setAddedToCart] = useState(false);
+  const addedToCart = items.some((item) => item.id === product.id);
 
   const handleClick = () => {
     if (!addedToCart) {
-      add(product),
-      setAddedToCart(true)
-    } else {
+      add(product);
+    } else{
       router.push("/cart"); 
-    };
-  }  
+    }
+  };  
 
-  const buttonClass = `${styles.addToCartBtn} ${(addedToCart || product.count >= 1) ? styles.addedToCartBtn :  ""}`;
+  const buttonClass = `${styles.addToCartBtn} ${addedToCart  ? styles.addedToCartBtn :  ""}`;
 
   return(
       <button className={buttonClass} onClick={handleClick}>

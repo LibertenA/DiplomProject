@@ -2,6 +2,7 @@
 
 import styles from "./CartProduct.module.css";
 import { useRouter } from "next/navigation";
+import { useCart } from "@/context/CartContext";
 
 interface CartProductProps {
   id: number;
@@ -10,14 +11,11 @@ interface CartProductProps {
   discount: number;
   count: number;
   image: string; 
-  Increment: (id: number) => void;
-  Decrement: (id: number) => void;
-  Remove: (id: number) => void;
 }
-
 
 export default function CartProduct(props: CartProductProps) { 
 
+  const { increment, decrement, remove } = useCart();
   const router = useRouter();
 
   const handleClick = () => {
@@ -38,7 +36,7 @@ export default function CartProduct(props: CartProductProps) {
       </div>
 
       <div className={styles.cartProductCounter}>
-        <button type="button" className={styles.counterBtn} onClick={() => props.Decrement(props.id)}>
+        <button type="button" className={styles.counterBtn} onClick={() => decrement(props.id)}>
           <img src="/minus.png" alt="minus" />
         </button>
         <input
@@ -47,7 +45,7 @@ export default function CartProduct(props: CartProductProps) {
           value={props.count} 
           readOnly
         />
-        <button type="button" className={styles.counterBtn} onClick={() => props.Increment(props.id)}>
+        <button type="button" className={styles.counterBtn} onClick={() => increment(props.id)}>
           <img src="/plus.png" alt="plus" />
         </button>
       </div>
