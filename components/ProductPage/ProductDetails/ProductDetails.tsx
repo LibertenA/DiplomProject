@@ -28,7 +28,7 @@ interface ProductDetailsProps {
   system?: string;
   features?: string;
   ram?: number;
-  weight?: number;
+  weight?: string;
   wifi?: boolean;
 }
 
@@ -121,7 +121,7 @@ export default function ProductDetails( props : ProductDetailsProps) {
             </tr>
             <tr className={styles.featuresTableRow}>
               <th className={styles.featuresTableTh}>Вес</th>
-              <td className={styles.featuresTableTd}>{props.weight} кг</td>
+              <td className={styles.featuresTableTd}>{props.weight}</td>
             </tr>
             <tr className={styles.featuresTableRowLast}>
               <th className={styles.featuresTableTh}>Особенности</th>

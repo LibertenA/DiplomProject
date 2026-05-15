@@ -3,7 +3,7 @@ import {
   ProductPresentation,
   ProductPrice,
 } from "@/components/ProductPage";
-import styles from "./ProductInfo.module.css";
+import styles from "./ProductPage.module.css";
 
 interface ColorOption {
   id: string;
@@ -16,7 +16,7 @@ interface MemoryOption {
   memory: number;
 }
 
-interface ProductInfoProps {
+interface ProductPage {
   product: {
     id: number;
     title: string;
@@ -31,12 +31,21 @@ interface ProductInfoProps {
     system?: string;
     features?: string;
     ram?: number;
-    weight?: number;
+    weight?: string;
     wifi?: boolean;
   };
 }
 
-export default function ProductInfo({ product }: ProductInfoProps) {
+export default function ProductPage({ product }: ProductPage) {
+
+  const priceProductData = {
+    id: product.id,
+    title: product.title,
+    price: product.price,
+    discount: product.discount,
+    count: product.count,
+    image: product.images[0], 
+  };
 
   return (
     <div className={styles.productFullPlace}>
@@ -53,14 +62,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       </div>
 
       <ProductPrice
-        product={{
-          id: product.id,
-          title: product.title,
-          price: product.price,
-          discount: product.discount,
-          count: product.count,
-          images: product.images[0],
-        }} 
+        product={priceProductData} 
       />
     </div>
   );

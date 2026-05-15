@@ -10,7 +10,7 @@ interface Product {
   price: number;
   discount: number;
   count: number;
-  images: string;
+  image: string;
 }
 
 interface ProductListCardProps {
@@ -27,7 +27,7 @@ export default function ProductListCard({ product }: ProductListCardProps) {
   return (
     <div className={styles.productCard}>
       <div className={styles.productCardIcon} onClick={handleClick}>
-        <img src={product.images} className={styles.productIcon} alt={product.title} />
+        <img src={product.image} className={styles.productIcon} alt={product.title} />
       </div>
 
       <div className={styles.productCardMain}>
@@ -46,7 +46,7 @@ export default function ProductListCard({ product }: ProductListCardProps) {
           price: product.price,
           discount: product.discount,
           count: product.count,
-          image: product.images[0],
+          image: product.image,
         }} />
       </div>
       

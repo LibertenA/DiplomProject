@@ -9,7 +9,7 @@ interface Product {
   price: number;
   discount: number;
   count: number;
-  images: string;
+  image: string;
 }
 
 interface ProductPriceProps {
@@ -17,7 +17,6 @@ interface ProductPriceProps {
 }
 
 export default function ProductPrice({ product }: ProductPriceProps) {
-
 
   return (
     <div className={styles.productCardAddToCart}>
@@ -33,7 +32,7 @@ export default function ProductPrice({ product }: ProductPriceProps) {
           price: product.price,
           discount: product.discount,
           count: product.count,
-          image: product.images[0],
+          image: product.image,
         }} />
 
       <div className={styles.installmentInfo}>

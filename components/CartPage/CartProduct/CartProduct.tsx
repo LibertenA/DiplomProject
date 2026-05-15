@@ -38,7 +38,7 @@ export default function CartProduct(props: CartProductProps) {
       </div>
 
       <div className={styles.cartProductCounter}>
-        <button type="button" className={styles.counterBtn} onClick={() => props.Decrement(props.id )}>
+        <button type="button" className={styles.counterBtn} onClick={() => props.Decrement(props.id)}>
           <img src="/minus.png" alt="minus" />
         </button>
         <input
@@ -47,7 +47,7 @@ export default function CartProduct(props: CartProductProps) {
           value={props.count} 
           readOnly
         />
-        <button type="button" className={styles.counterBtn} onClick={() => props.Increment(props.id )}>
+        <button type="button" className={styles.counterBtn} onClick={() => props.Increment(props.id)}>
           <img src="/plus.png" alt="plus" />
         </button>
       </div>

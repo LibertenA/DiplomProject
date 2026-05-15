@@ -4,11 +4,7 @@ import styles from "./CartButton.module.css";
 import { useRouter  } from 'next/navigation';
 import { useCart } from "@/context/CartContext";
 
-interface CartButtonProps {
-  count: number;
-}
-
-export default function CartButton({ count }: CartButtonProps) {
+export default function CartButton() {
   const {
       totalCount
     } = useCart();

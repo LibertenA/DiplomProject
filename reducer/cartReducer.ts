@@ -7,15 +7,6 @@ export type Product = {
   discount: number;
   count: number;
   image: string;
-  color?: string;
-  memory?: string;
-  display?: string; 
-  cpu?: string;
-  system?: string;
-  features?: string;
-  ram?: number;
-  weight?: number;
-  wifi?: boolean;
 };
 
 export type CartItem = {
@@ -31,18 +22,21 @@ export type CartState = {
   items: CartItem[];
 };
 
-const defaultCartItems: CartItem[] = mockProducts.filter(product => product.count > 0).map(product => ({
+/*const defaultCartItems: CartItem[] = mockProducts.filter(product => product.count > 0).map(product => ({
   id: product.id,
   title: product.title,
   price: product.price,
   discount: product.discount,
   count: product.count,
   image: product.images[0],
-}));
+}));*/
 
 
-export const initialState: CartState = {
+/*export const initialState: CartState = {
   items: defaultCartItems 
+};*/
+export const initialState: CartState = {
+  items: [] 
 };
 
 export type Action = { type: 'ADD';  payload: Product  } | { type: 'INCREMENT'; payload: number } | { type: 'DECREMENT'; payload: number } | { type: 'REMOVE'; payload: number };

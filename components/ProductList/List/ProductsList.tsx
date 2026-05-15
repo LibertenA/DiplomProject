@@ -20,7 +20,7 @@ export default function ProductsList({ title }: ProductsListProps) {
               price: product.price,
               discount: product.discount,
               count: product.count,
-              images: product.images[0],
+              image: product.images[0],
             }} 
           />
         ))}

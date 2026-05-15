@@ -25,6 +25,7 @@ export default function Button({ product }: ProductButtonProps) {
   const [addedToCart, setAddedToCart] = useState(false);
 
   const handleClick = () => {
+    console.log("Добавляемый товар:", product); 
     if (!addedToCart) {
       add(product),
       setAddedToCart(true)
