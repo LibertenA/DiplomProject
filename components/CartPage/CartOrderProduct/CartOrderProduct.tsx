@@ -25,7 +25,7 @@ export default function CartOrderProduct({
 
         <div className={styles.orderPlaceRow}>
           <span className={styles.orderPlaceLabel}>Скидка</span>
-          <span className={styles.orderPlaceLabel}>-{discount} ₽</span>
+          <span className={styles.orderPlaceLabel}>{-discount} ₽</span>
         </div>
 
         <div className={styles.orderPlaceRowTotalPrice}>

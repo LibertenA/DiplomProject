@@ -1,7 +1,7 @@
 "use client"
 
 import Button from "@/components/Button";
-import styles from "./ProductListCard.module.css";
+import styles from "./ListOfProducts.module.css";
 import { useRouter } from "next/navigation";
 
 interface Product {
@@ -17,7 +17,8 @@ interface ProductListCardProps {
   product: Product;
 }
 
-export default function ProductListCard({ product }: ProductListCardProps) {
+export default function ListOfProducts ({product}: ProductListCardProps) {
+  
   const router = useRouter();
 
   const handleClick = () => {
@@ -51,7 +52,6 @@ export default function ProductListCard({ product }: ProductListCardProps) {
           image: product.image,
         }} />
       </div>
-      
     </div>
   );
 }

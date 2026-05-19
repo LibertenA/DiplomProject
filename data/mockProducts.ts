@@ -14,7 +14,8 @@ export const mockProducts = [
     display: "7.6\" Dynamic AMOLED 3X",
     cpu: "Snapdragon 8 Gen 5",
     features: "Складной экран, ИИ функции",
-    images: ["/products/product101.png", "/products/product101(2).png", "/products/product101(3).png"]
+    images: ["/products/product101.png", "/products/product101(2).png", "/products/product101(3).png"],
+    category: "Смартфоны"
   },
   {
     id: 102,
@@ -26,7 +27,8 @@ export const mockProducts = [
     display: "6.9\" Super Retina XDR",
     cpu: "A19 Pro",
     features: "Камера 48+48+48 Мп, iOS 19",
-    images: ["/products/product102.png", "/products/product102(2).png"]
+    images: ["/products/product102.png", "/products/product102(2).png"],
+    category: "Смартфоны"
   },
   {
     id: 103,
@@ -38,7 +40,8 @@ export const mockProducts = [
     display: "6.7\" LTPO OLED",
     cpu: "Google Tensor G5",
     features: "Gemini Nano, Magic Editor 2.0",
-    images: ["/products/product103.png", "/products/product103(2).png"]
+    images: ["/products/product103.png", "/products/product103(2).png"],
+    category: "Смартфоны"
   },
   {
     id: 104,
@@ -50,7 +53,8 @@ export const mockProducts = [
     display: "10.2\" Triple OLED",
     cpu: "Kirin 9010",
     features: "Тройное сложение Z-fold",
-    images: ["/products/product104.png"]
+    images: ["/products/product104.png"],
+    category: "Смартфоны"
   },
   {
     id: 105,
@@ -62,7 +66,8 @@ export const mockProducts = [
     display: "6.7\" Flexible OLED",
     cpu: "Snapdragon 8 Gen 4",
     features: "Интерфейс Glyph Gen 3, 12ГБ ОЗУ",
-    images: ["/products/product105.png", "/products/product105(2).png"]
+    images: ["/products/product105.png", "/products/product105(2).png"],
+    category: "Смартфоны"
   },
 
   // --- 2. НОУТБУКИ И УЛЬТРАБУКИ ---
@@ -83,7 +88,8 @@ export const mockProducts = [
     cpu: "Apple M4 (10-core)",
     system: "macOS",
     features: "8ГБ ОЗУ, вес 1.24кг",
-    images: ["/products/product201.png", "/products/product201(2).png", "/products/product201(3).png", "/products/product201(4).png"]
+    images: ["/products/product201.png", "/products/product201(2).png", "/products/product201(3).png", "/products/product201(4).png"],
+    category: "Ноутбуки"
   },
   {
     id: 202,
@@ -96,7 +102,8 @@ export const mockProducts = [
     cpu: "Intel Core Ultra 9",
     system: "Windows 11",
     features: "32ГБ ОЗУ, два экрана",
-    images: ["/products/product202.png", "/products/product202(2).png"]
+    images: ["/products/product202.png", "/products/product202(2).png"],
+    category: "Ноутбуки"
   },
   {
     id: 203,
@@ -109,7 +116,8 @@ export const mockProducts = [
     cpu: "Intel Core i9-15900HX",
     system: "Windows 11",
     features: "NVIDIA RTX 5080, Игровой",
-    images: ["/products/product203.png"]
+    images: ["/products/product203.png"],
+    category: "Ноутбуки"
   },
   {
     id: 204,
@@ -122,7 +130,8 @@ export const mockProducts = [
     cpu: "Snapdragon X Elite",
     system: "Windows 11",
     features: "NPU 45 TOPS, до 22ч работы",
-    images: ["/products/product204.png", "/products/product204(2).png"]
+    images: ["/products/product204.png", "/products/product204(2).png"],
+    category: "Ноутбуки"
   },
   {
     id: 205,
@@ -135,7 +144,8 @@ export const mockProducts = [
     cpu: "Intel Core Ultra 7",
     system: "Windows 11",
     features: "Магниевый сплав, вес 1.25кг",
-    images: ["/products/product205.png"]
+    images: ["/products/product205.png"],
+    category: "Ноутбуки"
   },
 
   // --- 3. КУХОННАЯ ТЕХНИКА ---
@@ -146,7 +156,8 @@ export const mockProducts = [
     discount: 10000,
     count: 0,
     features: "Давление 19 бар, система LatteCrema",
-    images: ["/products/product301.png", "/products/product301(2).png"]
+    images: ["/products/product301.png", "/products/product301(2).png"],
+    category: "Бытовая техника"
   },
   {
     id: 302,
@@ -155,7 +166,8 @@ export const mockProducts = [
     discount: 20000,
     count: 0,
     features: "Экран 32\", ИИ-камеры распознавания еды",
-    images: ["/products/product302.png"]
+    images: ["/products/product302.png"],
+    category: "Бытовая техника"
   },
   {
     id: 303,
@@ -164,7 +176,8 @@ export const mockProducts = [
     discount: 3500,
     count: 0,
     features: "15 режимов, приготовление под давлением",
-    images: ["/products/product303.png"]
+    images: ["/products/product303.png"],
+    category: "Бытовая техника"
   },
   {
     id: 304,
@@ -173,7 +186,8 @@ export const mockProducts = [
     discount: 2000,
     count: 0,
     features: "Таймер заваривания, стекло Schott Duran",
-    images: ["/products/product304.png"]
+    images: ["/products/product304.png"],
+    category: "Бытовая техника"
   },
   {
     id: 305,
@@ -182,7 +196,8 @@ export const mockProducts = [
     discount: 8000,
     count: 0,
     features: "ИИ-сенсор выпечки, функция пара",
-    images: ["/products/product305.png"]
+    images: ["/products/product305.png"],
+    category: "Бытовая техника"
   },
 
   // --- 4. ТЕЛЕВИЗОРЫ И ПАНЕЛИ ---
@@ -194,7 +209,8 @@ export const mockProducts = [
     count: 0,
     display: "77\" OLED EVO",
     features: "Беспроводное подключение Zero Connect",
-    images: ["/products/product401.png", "/products/product401(2).png"]
+    images: ["/products/product401.png", "/products/product401(2).png"],
+    category: "Телевизоры и проекторы"
   },
   {
     id: 402,
@@ -204,7 +220,8 @@ export const mockProducts = [
     count: 0,
     display: "65\" QD-OLED",
     features: "Процессор Cognitive XR, звук Surface Audio+",
-    images: ["/products/product402.png"]
+    images: ["/products/product402.png"],
+    category: "Телевизоры и проекторы"
   },
   {
     id: 403,
@@ -214,7 +231,8 @@ export const mockProducts = [
     count: 0,
     display: "85\" 8K UHD",
     features: "Частота 144Гц, ИИ-масштабирование",
-    images: ["/products/product403.png", "/products/product403(2).png"]
+    images: ["/products/product403.png", "/products/product403(2).png"],
+    category: "Телевизоры и проекторы"
   },
   {
     id: 404,
@@ -224,7 +242,8 @@ export const mockProducts = [
     count: 0,
     display: "82\" Mini LED",
     features: "Яркость 2000 нит, 1024 зоны затемнения",
-    images: ["/products/product404.png"]
+    images: ["/products/product404.png"],
+    category: "Телевизоры и проекторы"
   },
   {
     id: 405,
@@ -234,7 +253,8 @@ export const mockProducts = [
     count: 0,
     display: "Проекция до 100\"",
     features: "Автокоррекция, поддержка батарейного блока",
-    images: ["/products/product405.png"]
+    images: ["/products/product405.png"],
+    category: "Телевизоры и проекторы"
   },
 
   // --- 5. УМНЫЙ ДОМ И КЛИМАТ ---
@@ -245,7 +265,8 @@ export const mockProducts = [
     discount: 10000,
     count: 0,
     features: "Мощность 12000 Па, мойка горячей водой 60°C",
-    images: ["/products/product501.png", "/products/product501(2).png"]
+    images: ["/products/product501.png", "/products/product501(2).png"],
+    category: "Умный дом и климат"
   },
   {
     id: 502,
@@ -254,7 +275,8 @@ export const mockProducts = [
     discount: 5000,
     count: 0,
     features: "Радиус 10 метров, шум 56 дБ",
-    images: ["/products/product502.png"]
+    images: ["/products/product502.png"],
+    category: "Умный дом и климат"
   },
   {
     id: 503,
@@ -264,7 +286,8 @@ export const mockProducts = [
     count: 0,
     display: "10.1\" поворотный экран",
     features: "Алиса с YandexGPT 3",
-    images: ["/products/product503.png", "/products/product503(2).png"]
+    images: ["/products/product503.png", "/products/product503(2).png"],
+    category: "Умный дом и климат"
   },
   {
     id: 504,
@@ -273,7 +296,8 @@ export const mockProducts = [
     discount: 1500,
     count: 0,
     features: "Протокол Matter, поддержка Apple HomeKey",
-    images: ["/products/product504.png"]
+    images: ["/products/product504.png"],
+    category: "Умный дом и климат"
   },
   {
     id: 505,
@@ -282,7 +306,8 @@ export const mockProducts = [
     discount: 0,
     count: 0,
     features: "Класс A+++, увлажнение и самоочистка",
-    images: ["/products/product505.png"]
+    images: ["/products/product505.png"],
+    category: "Умный дом и климат"
   },
 
   // --- 6. ГЕЙМИНГ (GAMING) ---
@@ -294,7 +319,8 @@ export const mockProducts = [
     count: 0,
     memory: [{ id: 'm1', memory: 2048 }],
     features: "PSSR масштабирование, Игровая консоль",
-    images: ["/products/product601.png", "/products/product601(2).png"]
+    images: ["/products/product601.png", "/products/product601(2).png"],
+    category: "Гейминг"
   },
   {
     id: 602,
@@ -306,7 +332,8 @@ export const mockProducts = [
     display: "8\" 90Гц OLED",
     cpu: "AMD Custom Zen 5",
     features: "Портативная консоль",
-    images: ["/products/product602.png"]
+    images: ["/products/product602.png"],
+    category: "Гейминг"
   },
   {
     id: 603,
@@ -317,7 +344,8 @@ export const mockProducts = [
     memory: [{ id: 'm1', memory: 256 }, { id: 'm2', memory: 512 }],
     cpu: "NVIDIA T239 (DLSS 3.5)",
     features: "Обратная совместимость",
-    images: ["/products/product603.png"]
+    images: ["/products/product603.png"],
+    category: "Гейминг"
   },
   {
     id: 604,
@@ -327,7 +355,8 @@ export const mockProducts = [
     count: 0,
     display: "57\" Dual UHD",
     features: "Изогнутость 1000R, 240Гц",
-    images: ["/products/product604.png", "/products/product604(2).png"]
+    images: ["/products/product604.png", "/products/product604(2).png"],
+    category: "Гейминг"
   },
   {
     id: 605,
@@ -338,7 +367,8 @@ export const mockProducts = [
     memory: [{ id: 'm1', memory: 256 }, { id: 'm2', memory: 512 }],
     system: "visionOS 3.0",
     features: "Пространственное аудио, AR/VR",
-    images: ["/products/product605.png"]
+    images: ["/products/product605.png"],
+    category: "Гейминг"
   },
 
   // --- 7. ПЕРСОНАЛЬНЫЙ УХОД (BEAUTY) ---
@@ -349,7 +379,8 @@ export const mockProducts = [
     discount: 3000,
     count: 0,
     features: "Защита кожи головы, 5 насадок",
-    images: ["/products/product701.png", "/products/product701(2).png"]
+    images: ["/products/product701.png", "/products/product701(2).png"],
+    category: "Персональный уход"
   },
   {
     id: 702,
@@ -358,7 +389,8 @@ export const mockProducts = [
     discount: 4000,
     count: 0,
     features: "Фен и стайлер 2-в-1, 3 режима нагрева",
-    images: ["/products/product702.png"]
+    images: ["/products/product702.png"],
+    category: "Персональный уход"
   },
   {
     id: 703,
@@ -367,7 +399,8 @@ export const mockProducts = [
     discount: 5000,
     count: 0,
     features: "Беспроводная зарядка Qi, лезвия NanoTech",
-    images: ["/products/product703.png", "/products/product703(2).png"]
+    images: ["/products/product703.png", "/products/product703(2).png"],
+    category: "Персональный уход"
   },
   {
     id: 704,
@@ -376,7 +409,8 @@ export const mockProducts = [
     discount: 2000,
     count: 0,
     features: "ИИ-коучинг, магнитная зарядка iOSense",
-    images: ["/products/product704.png"]
+    images: ["/products/product704.png"],
+    category: "Персональный уход"
   },
   {
     id: 705,
@@ -385,7 +419,8 @@ export const mockProducts = [
     discount: 5000,
     count: 0,
     features: "Амплитуда 16мм, Bluetooth приложение",
-    images: ["/products/product705.png"]
+    images: ["/products/product705.png"],
+    category: "Персональный уход"
   },
 
   // --- 8. АУДИО И ЗВУК ---
@@ -396,7 +431,8 @@ export const mockProducts = [
     discount: 2000,
     count: 0,
     features: "ИИ-шумоподавление, 45ч работы",
-    images: ["/products/product801.png", "/products/product801(2).png"]
+    images: ["/products/product801.png", "/products/product801(2).png"],
+    category: "Аудиотехника"
   },
   {
     id: 802,
@@ -405,7 +441,8 @@ export const mockProducts = [
     discount: 10000,
     count: 0,
     features: "Поддержка Dolby Atmos 7.1.4, HDMI eARC",
-    images: ["/products/product802.png"]
+    images: ["/products/product802.png"],
+    category: "Аудиотехника"
   },
   {
     id: 803,
@@ -414,7 +451,8 @@ export const mockProducts = [
     discount: 1500,
     count: 0,
     features: "Режим погружения, Bluetooth 5.3 LE",
-    images: ["/products/product803.png", "/products/product803(2).png"]
+    images: ["/products/product803.png", "/products/product803(2).png"],
+    category: "Аудиотехника"
   },
   {
     id: 804,
@@ -423,7 +461,8 @@ export const mockProducts = [
     discount: 0,
     count: 0,
     features: "Мощность 1100 Вт RMS, диапазон 14Гц-27кГц",
-    images: ["/products/product804.png"]
+    images: ["/products/product804.png"],
+    category: "Аудиотехника"
   },
   {
     id: 805,
@@ -432,7 +471,8 @@ export const mockProducts = [
     discount: 3000,
     count: 0,
     features: "Винтажный дизайн, входы RCA/3.5мм",
-    images: ["/products/product805.png"]
+    images: ["/products/product805.png"],
+    category: "Аудиотехника"
   },
 
   // --- 9. ФОТО И ВИДЕО ---
@@ -443,7 +483,8 @@ export const mockProducts = [
     discount: 0,
     count: 0,
     features: "61 Мп Full-frame, ИИ-автофокус",
-    images: ["/products/product901.png", "/products/product901(2).png"]
+    images: ["/products/product901.png", "/products/product901(2).png"],
+    category: "Фото- и видеотехника"
   },
   {
     id: 902,
@@ -452,7 +493,8 @@ export const mockProducts = [
     discount: 15000,
     count: 0,
     features: "Камера Hasselblad, 50 мин полета",
-    images: ["/products/product902.png"]
+    images: ["/products/product902.png"],
+    category: "Фото- и видеотехника"
   },
   {
     id: 903,
@@ -461,7 +503,8 @@ export const mockProducts = [
     discount: 4000,
     count: 0,
     features: "Видео 6K 60fps, стабилизация HyperSmooth 7.0",
-    images: ["/products/product903.png", "/products/product903(2).png"]
+    images: ["/products/product903.png", "/products/product903(2).png"],
+    category: "Фото- и видеотехника"
   },
   {
     id: 904,
@@ -470,7 +513,8 @@ export const mockProducts = [
     discount: 0,
     count: 0,
     features: "Матрица 40.2Мп, стаб IBIS 6 стопов",
-    images: ["/products/product904.png"]
+    images: ["/products/product904.png"],
+    category: "Фото- и видеотехника"
   },
   {
     id: 905,
@@ -479,7 +523,8 @@ export const mockProducts = [
     discount: 5000,
     count: 0,
     features: "Панорамное видео 8K, батарея 2290 мАч",
-    images: ["/products/product905.png"]
+    images: ["/products/product905.png"],
+    category: "Фото- и видеотехника"
   },
 
   // --- 10. КРУПНАЯ ТЕХНИКА ---
@@ -490,7 +535,8 @@ export const mockProducts = [
     discount: 7000,
     count: 0,
     features: "Загрузка 10.5 кг, ИИ-определение ткани",
-    images: ["/products/product1001.png", "/products/product1001(2).png"]
+    images: ["/products/product1001.png", "/products/product1001(2).png"],
+    category: "Бытовая техника"
   },
   {
     id: 1002,
@@ -499,7 +545,8 @@ export const mockProducts = [
     discount: 10000,
     count: 0,
     features: "Система PowerDisk, управление по WiFi",
-    images: ["/products/product1002.png"]
+    images: ["/products/product1002.png"],
+    category: "Бытовая техника"
   },
   {
     id: 1003,
@@ -508,7 +555,8 @@ export const mockProducts = [
     discount: 0,
     count: 0,
     features: "Ширина 90 см, ручная работа",
-    images: ["/products/product1003.png", "/products/product1003(2).png"]
+    images: ["/products/product1003.png", "/products/product1003(2).png"],
+    category: "Бытовая техника"
   },
   {
     id: 1004,
@@ -517,7 +565,8 @@ export const mockProducts = [
     discount: 12000,
     count: 0,
     features: "Защита ABT Pro, 3 зоны свежести",
-    images: ["/products/product1004.png"]
+    images: ["/products/product1004.png"],
+    category: "Бытовая техника"
   },
   {
     id: 1005,
@@ -526,6 +575,7 @@ export const mockProducts = [
     discount: 9000,
     count: 0,
     features: "Тепловой насос, самоочистка",
-    images: ["/products/product1005.png"]
+    images: ["/products/product1005.png"],
+    category: "Бытовая техника"
   }
 ];

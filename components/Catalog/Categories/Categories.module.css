@@ -1,0 +1,42 @@
+.categoryPlace{
+  border-right: 1px solid #e1e7ef;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  min-height: 60vh;
+  max-width: 240px;
+  padding-top: 24px; 
+  padding-bottom: 16px;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.categoryBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 8px;
+  text-align: nowrap;
+  width: 220px;
+  text-align: left;
+  color: #1B1A1D;
+
+  &:hover {
+    background-color: #F3F4F6;
+    color: #396def;
+  }
+}
+
+.categoryActiveBtn{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 8px;
+  text-align: nowrap;
+  width: 220px;
+  text-align: left;
+  background-color: #F3F4F6;
+  color: #396def;
+}

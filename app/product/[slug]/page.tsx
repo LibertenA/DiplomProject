@@ -20,7 +20,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <div>
-      <DirectoryCatalog title={product.title} />
+      <DirectoryCatalog title={product.title} category={product.category}/>
 
       <ProductPage product={product} />
 

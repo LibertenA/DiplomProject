@@ -1,23 +1,61 @@
-import { askAI } from "@/lib/ai"
+// app/api/ai/route.ts
 
-export async function POST(req: Request) {
+import { askAI } from "@/lib/ai";
+
+import {
+  saveAIMessage,
+  getRecentAIMessages,
+} from "@/lib/ai-chat.service";
+
+type AIRequestBody = {
+  message?: string;
+};
+
+export async function POST(request: Request) {
   try {
-    const body = await req.json()
+    const body = (await request.json()) as AIRequestBody;
 
-    const message = body.message
+    const message = body.message;
 
-    const answer = await askAI(message)
+    if (!message || typeof message !== "string") {
+      return Response.json(
+        {
+          success: false,
+          answer: "Введите вопрос о технике или электронике",
+        },
+        {
+          status: 400,
+        }
+      );
+    }
+
+    const userMessage = message.trim();
+
+    await saveAIMessage("user", userMessage);
+
+    const history = await getRecentAIMessages(10);
+
+    const answer = await askAI(userMessage, {
+      history,
+    });
+
+    await saveAIMessage("assistant", answer);
 
     return Response.json({
       success: true,
-      answer: answer
-    })
+      answer,
+    });
   } catch (error) {
-    console.error(error)
+    console.error("AI route error:", error);
 
-    return Response.json({
-      success: false,
-      error: "AI request failed"
-    })
+    return Response.json(
+      {
+        success: false,
+        answer: "Ошибка AI",
+      },
+      {
+        status: 500,
+      }
+    );
   }
 }

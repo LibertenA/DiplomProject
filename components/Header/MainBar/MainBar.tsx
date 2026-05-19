@@ -6,12 +6,17 @@ import CartButton from "../CartButtonComponent";
 import ModalWindow from "../ModalWindow";
 import styles from "./MainBar.module.css";
 import Link from 'next/link';
+import { useRouter  } from 'next/navigation';
 
 
 export default function MainBar() {
-  const cart = 0;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState<"login" | "register">("login");
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/catalog"); 
+  };  
 
   function openLoginModal() {
     setModalMode("login");
@@ -37,7 +42,7 @@ export default function MainBar() {
           <h1 className={styles.mainTitle}><Link href="/">online:store</Link></h1>
         </div>
 
-        <button className={styles.headerCatalogBtn}>
+        <button className={styles.headerCatalogBtn} onClick={handleClick}>
           <img
             className={styles.catalogBtnIcon}
             src="/catalogbtn.png"

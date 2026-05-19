@@ -21,7 +21,11 @@ export default function ProductPrice({ product }: ProductPriceProps) {
   return (
     <div className={styles.productCardAddToCart}>
       <div className={styles.productCardPriceBlock}>
-        <span className={styles.oldPrice}> {product.price} ₽</span>
+        {product.discount > 0 ? (
+            <span className={styles.oldPrice}> {product.price} ₽</span>
+          ) : (
+            <span className={styles.oldPrice}></span>
+          )} 
         <span className={styles.currentPrice}> {product.price - product.discount} ₽ </span>
       </div>
 

@@ -35,6 +35,7 @@ export type CartState = {
 /*export const initialState: CartState = {
   items: defaultCartItems 
 };*/
+
 export const initialState: CartState = {
   items: [] 
 };
@@ -54,18 +55,18 @@ export function cartReducer(state: CartState, action: Action): CartState {
         };
       }
 
-      const newItem: CartItem = {
+      /*const newItem: CartItem = {
         id: product.id,
         title: product.title,
         price: product.price,
         image: product.image,
         count: product.count || 1,
         discount: product.discount
-      };
+      };*/
 
       return {
         ...state,
-        items: [...state.items, newItem]
+        /*items: [...state.items, newItem]*/
       };
 
     case 'INCREMENT':
