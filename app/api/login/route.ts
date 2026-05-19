@@ -45,10 +45,6 @@ export async function POST(request: Request) {
       });
     }
 
-    /*
-      Если логин успешен — создаём значение сессии
-      и кладём его в cookie
-    */
     const sessionValue = createSessionValue({
       id: user.id,
       login: user.login,
@@ -57,21 +53,14 @@ export async function POST(request: Request) {
     const cookieStore = await cookies();
     cookieStore.set("session", sessionValue, {
       httpOnly: true,
-      // cookie недоступна через document.cookie в JS на клиенте
-      // это полезнее и безопаснее
 
       sameSite: "lax",
-      // нормальный базовый вариант против части CSRF-сценариев
 
       secure: false,
-      // для локальной разработки нормально
-      // на production ставят true под HTTPS
 
       path: "/",
-      // cookie будет доступна по всему сайту
 
       maxAge: 60 * 60 * 24 * 7,
-      // 7 дней в секундах
     });
 
     return Response.json({

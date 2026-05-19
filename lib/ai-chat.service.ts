@@ -1,5 +1,3 @@
-// lib/ai-chat.service.ts
-
 import pool from "@/lib/db";
 
 export type AIMessageRole = "user" | "assistant";

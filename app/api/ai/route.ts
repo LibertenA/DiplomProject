@@ -1,4 +1,3 @@
-// app/api/ai/route.ts
 
 import { askAI } from "@/lib/ai";
 

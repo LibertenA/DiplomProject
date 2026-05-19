@@ -5,10 +5,6 @@ export async function GET() {
   try {
     const cookieStore = await cookies();
     const sessionCookie = cookieStore.get("session");
-    /*
-      get("session") вернёт объект cookie или undefined,
-      если cookie нет
-    */
 
     if (!sessionCookie) {
       return Response.json({
@@ -18,7 +14,6 @@ export async function GET() {
     }
 
     const user = readSessionValue(sessionCookie.value);
-    // пытаемся декодировать cookie
 
     if (!user) {
       return Response.json({
