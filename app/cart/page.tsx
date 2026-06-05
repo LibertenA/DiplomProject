@@ -1,4 +1,4 @@
-import { ProductsList } from "@/components/ProductList/";
+import { ProductList } from "@/components/ProductList/";
 import { CartProductsPlace } from "@/components/CartPage";
 
 export default function Page() {
@@ -6,7 +6,7 @@ export default function Page() {
     <div>
         <CartProductsPlace />
 
-        <ProductsList title="Рекомендации" />
+        <ProductList title="Рекомендации" />
     </div>
   );
 }

@@ -22,7 +22,6 @@ interface ProductPage {
     title: string;
     price: number;
     discount: number;
-    count: number;
     images: string[];
     color?: ColorOption[];
     memory?: MemoryOption[];
@@ -43,7 +42,6 @@ export default function ProductPage({ product }: ProductPage) {
     title: product.title,
     price: product.price,
     discount: product.discount,
-    count: product.count,
     image: product.images[0], 
   };
 

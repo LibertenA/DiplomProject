@@ -6,7 +6,7 @@ import CartButton from "../CartButtonComponent";
 import ModalWindow from "../ModalWindow";
 import styles from "./MainBar.module.css";
 import Link from 'next/link';
-import { useRouter  } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 
 export default function MainBar() {

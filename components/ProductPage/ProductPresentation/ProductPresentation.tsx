@@ -3,11 +3,19 @@
 import { useState } from "react";
 import styles from "./ProductPresentation.module.css";
 
+interface ProductImage {
+  id?: number;
+  image_url: string;
+}
+
 interface ProductPresentationProps {
   images: string[];
 }
 
-export default function ProductPresentation({images}: ProductPresentationProps) {
+export default function ProductPresentation({
+  images,
+}: ProductPresentationProps) {
+
   const [pickedImage, setPickedImage] = useState(0);
 
   if (!images?.length) {
@@ -16,30 +24,37 @@ export default function ProductPresentation({images}: ProductPresentationProps) 
 
   return (
     <div className={styles.placePresentation}>
-      
+
       <div className={styles.mainIcon}>
-        <img src={images[pickedImage]} className={styles.mainIconImg} />
+        <img
+          src={images[pickedImage]}
+          className={styles.mainIconImg}
+          alt="product"
+        />
       </div>
 
       <ul className={styles.gallery}>
-        {images.map((url, index) => {
-            const isActive = index === pickedImage;
-            return (
-                <li 
-                  key={index} 
-                  className={`${styles.galleryItem} ${isActive ? styles.galleryItemActive : ''}`}
+        {images.map((image, index) => {
 
-                  onClick={() => setPickedImage(index)} 
-                >
-                  <img src={url} 
-                  className={styles.galleryImg} 
-                  />
-                </li>
-              )
-            }  
-        )}
-      
+          const isActive = index === pickedImage;
+
+          return (
+            <li
+              key={index}
+              className={`${styles.galleryItem} ${isActive ? styles.galleryItemActive : ""}`}
+              onClick={ () =>setPickedImage(index) }
+            >
+              <img
+                src={image}
+                className={styles.galleryImg}
+                alt="product"
+              />
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 }
+
+

@@ -1,1 +1,1 @@
-export { default as CartProductsPlace } from "./CartProductsPlace";
+export { default as CartProductsPlace } from "./CartPage";

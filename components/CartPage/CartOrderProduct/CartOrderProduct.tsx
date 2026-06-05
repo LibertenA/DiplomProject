@@ -9,7 +9,6 @@ interface CartOrderProductProps {
 export default function CartOrderProduct({
   price,
   discount,
-  count,
 }: CartOrderProductProps) {
   const totalPrice = price - discount;
 
@@ -19,7 +18,7 @@ export default function CartOrderProduct({
 
       <div className={styles.orderPlaceDetails}>
         <div className={styles.orderPlaceRow}>
-          <span className={styles.orderPlaceLabel}>{count} товара</span>
+          <span className={styles.orderPlaceLabel}>{0} товара</span>
           <span className={styles.orderPlaceLabel}>{price} ₽</span>
         </div>
 

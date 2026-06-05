@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import { ProductsList } from "../components/ProductList/";
+import { ProductList } from "../components/ProductList/";
 import AIChat from "@/components/AIChat";
 
 export default function Page() {
@@ -7,9 +7,9 @@ export default function Page() {
     <div>
         <Banner />
 
-        <ProductsList title="Специально для вас" />
+        <ProductList title="Специально для вас" />
 
-        <ProductsList title="Рекомендации" />
+        <ProductList title="Рекомендации" />
 
         <AIChat />
     </div>

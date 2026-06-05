@@ -1,17 +1,18 @@
 "use client";
 
 import { createContext, useContext, useReducer, ReactNode } from "react";
-import { CartItem, cartReducer, Product, initialState } from "@/reducer/cartReducer";
+import {  cartReducer, ProductWithCount, initialState } from "@/reducer/cartReducer";
 
 type CartContextValue = {
-  items: CartItem[];
+  items: ProductWithCount[];
   totalCount: number,
   totalPrice: number,
   totalDiscount: number,
-  add: (product: Product) => void;
+  add: (product: ProductWithCount) => void;
   increment: (id: number) => void;
   decrement: (id: number) => void;
   remove: (id: number) => void;
+  getProductCount: (id: number) => number;
 };
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -34,7 +35,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
     0
   );
 
-  function add(product: Product) {
+  function getProductCount(id: number) {
+    return state.items.filter((item) => item.id === id).length
+  }
+
+  function add(product: ProductWithCount) {
     dispatch({
       type: "ADD",
       payload: product
@@ -70,7 +75,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     add,
     increment,
     decrement,
-    remove
+    remove,
+    getProductCount,
   };
 
   return (

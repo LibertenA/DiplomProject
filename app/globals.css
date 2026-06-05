@@ -277,3 +277,45 @@ body {
     max-width: 88%;
   }
 }
+
+.ai-chat-attach-btn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-chat-attach-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-chat-image-preview {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: #f6f7fb;
+  border-top: 1px solid #eef0f4;
+  gap: 10px;
+}
+
+.ai-chat-image-preview img {
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ai-chat-remove-image-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  line-height: 1;
+}

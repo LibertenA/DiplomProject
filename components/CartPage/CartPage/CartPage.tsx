@@ -3,9 +3,9 @@
 import CartOrderProduct from "../CartOrderProduct";
 import CartProduct from "../CartProduct";
 import { useCart } from "@/context/CartContext";
-import styles from "./CartProductsPlace.module.css";
+import styles from "./CartPage.module.css";
 
-export default function CartProductsPlace() {
+export default function CartPage() {
     const {
       items,
       totalPrice,

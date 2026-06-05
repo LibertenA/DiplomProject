@@ -19,7 +19,6 @@ interface ProductDetailsProps {
   title: string;
   price: number;
   discount: number;
-  count: number;
   images: string[];
   color?: ColorOption[];
   memory?: MemoryOption[];

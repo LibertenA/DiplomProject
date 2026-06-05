@@ -3,19 +3,11 @@
 import styles from "./CartProduct.module.css";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
+import { Product } from '@/types/CartTypes'
 
-interface CartProductProps {
-  id: number;
-  title: string;
-  price: number;
-  discount: number;
-  count: number;
-  image: string; 
-}
+export default function CartProduct(props: Product) { 
 
-export default function CartProduct(props: CartProductProps) { 
-
-  const { increment, decrement, remove } = useCart();
+  const { increment, decrement, remove, getProductCount} = useCart();
   const router = useRouter();
 
   const handleClick = () => {
@@ -42,7 +34,7 @@ export default function CartProduct(props: CartProductProps) {
         <input
           type="number"
           className={styles.counterValue}
-          value={props.count} 
+          value={getProductCount(props.id)}
           readOnly
         />
         <button type="button" className={styles.counterBtn} onClick={() => increment(props.id)}>

@@ -8,7 +8,6 @@ interface Product {
   title: string;
   price: number;
   discount: number;
-  count: number;
   image: string;
 }
 
@@ -35,7 +34,6 @@ export default function ProductPrice({ product }: ProductPriceProps) {
           title: product.title,
           price: product.price,
           discount: product.discount,
-          count: product.count,
           image: product.image,
         }} />
 
